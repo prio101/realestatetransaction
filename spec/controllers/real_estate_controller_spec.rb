@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe RealEstateController, type: :controller do
+RSpec.describe RealEstatesController, type: :controller do
 
 end
