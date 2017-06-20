@@ -1,0 +1,14 @@
+## Customize the test machine
+machine:
+  # Version of ruby to use
+  ruby:
+    version:
+      ruby 2.4.0p0
+
+## Customize test commands
+test:
+  post:
+    - bundle exec rspec:
+        environment:
+          RAILS_ENV: test
+          RACK_ENV: test
