@@ -1,0 +1,10 @@
+scss:
+  enabled: false
+
+jshint:
+  enabled: false
+
+coffeescript:
+  enabled: false
+
+fail_on_violations: true
