@@ -1,5 +1,16 @@
 %div.container
   %div.row
+    .col-md-offset-4.col-md-4
+      - content_for :search do
+        .col-md-offset-4.col-md-4
+          = search_form_for @search do |f|
+            = f.label 'Search Square Feet Greater Than'
+            = f.text_field :sq_ft_gteq, class: 'form-control'
+            %br
+            = f.label 'Search Square Feet Lesser Than'
+            = f.text_field :sq_ft_lteq, class: 'form-control'
+            = f.submit 'Submit', class: 'btn btn-small btn-default'
+  .row
     %div.jumbotron
       %h2.text-center Real Estate
   %div.row

@@ -1,6 +1,7 @@
 class RealEstatesController < ApplicationController
   def index
-    @real_estates = RealEstate.all.page params[:page]
+    @search = RealEstate.search(params[:q])
+    @real_estates = @search.result(distinct: true).page params[:page]
   end
 
   def show
