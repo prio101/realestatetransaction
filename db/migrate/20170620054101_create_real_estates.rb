@@ -12,7 +12,7 @@ class CreateRealEstates < ActiveRecord::Migration[5.1]
       t.datetime  :sale_date
       t.decimal :price
       t.decimal   :latitude
-      t.decimal   :longtitude
+      t.decimal   :longitude
 
       t.timestamps
     end

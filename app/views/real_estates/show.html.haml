@@ -1,0 +1,44 @@
+%div.container
+  %div.row
+    %div.jumbotron
+      %h2.text-center Real Estate Detail Page
+  %div.row
+    %div.col-md-12
+      %p Street Name:
+      %small= @real_estate.street
+      %hr
+      %p City Name:
+      %small= @real_estate.city
+      %hr
+      %p Zip:
+      %small= @real_estate.zip
+      %hr
+      %p State:
+      %small= @real_estate.state
+      %hr
+      %p Beds:
+      %small= @real_estate.beds
+      %hr
+      %p Baths:
+      %small= @real_estate.baths
+      %hr
+      %p Square Feet:
+      %small= @real_estate.sq_ft
+      %hr
+      %p Type of Estate:
+      %small= @real_estate.type_of_estate
+      %hr
+      %p Sale Date:
+      %small= @real_estate.sale_date
+      %hr
+      %p Price:
+      %small= @real_estate.price
+      %hr
+      %p Latitude:
+      %small= @real_estate.latitude
+      %hr
+      %p Longitude:
+      %small= @real_estate.longitude
+  = link_to 'Home Page', real_estates_path,
+    class: 'btn btn-lg btn-info'
+  = link_to 'Edit', edit_real_estate_path
