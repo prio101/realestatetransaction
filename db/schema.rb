@@ -12,21 +12,20 @@
 
 ActiveRecord::Schema.define(version: 20170620054101) do
 
-  create_table "real_estates", force: :cascade do |t|
-    t.string "street"
-    t.string "city"
-    t.integer "zip"
-    t.string "state"
-    t.integer "beds"
-    t.integer "baths"
-    t.decimal "sq_ft"
-    t.string "type_of_estate"
-    t.datetime "sale_date"
-    t.decimal "price"
-    t.decimal "latitude"
-    t.decimal "longtitude"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'real_estates', force: :cascade do |t|
+    t.string 'street'
+    t.string 'city'
+    t.integer 'zip'
+    t.string 'state'
+    t.integer 'beds'
+    t.integer 'baths'
+    t.decimal 'sq_ft'
+    t.string 'type_of_estate'
+    t.datetime 'sale_date'
+    t.decimal 'price'
+    t.decimal 'latitude'
+    t.decimal 'longtitude'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
-
 end
