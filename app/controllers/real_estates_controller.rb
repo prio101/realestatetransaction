@@ -1,6 +1,6 @@
 class RealEstatesController < ApplicationController
   def index
-    @real_estates = RealEstate.all
+    @real_estates = RealEstate.all.page params[:page]
   end
 
   def show
