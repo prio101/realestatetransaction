@@ -30,7 +30,7 @@ namespace :populate_database do
         sale_date: format_date(row['sale_date']),
         price: row['price'],
         latitude: row['latitude'],
-        longtitude: row['longtitude']
+        longitude: row['longitude']
       )
     end
 

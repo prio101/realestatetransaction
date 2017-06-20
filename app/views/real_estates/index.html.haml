@@ -1,0 +1,42 @@
+%div.container
+  %div.row
+    %div.jumbotron
+      %h2.text-center Real Estate
+  %div.row
+    %div.col-md-12
+      %table.table.table-hover
+        %tr
+          %td Street
+          %td City
+          %td Zip
+          %td State
+          %td Beds
+          %td Baths
+          %td Sq: Feet
+          %td Type
+          %td Sale Date
+          %td Price
+          %td Latitude
+          %td Longitude
+          %td Actions
+        - @real_estates.each do |r|
+          %tr
+            %td= r.street
+            %td= r.city
+            %td= r.zip
+            %td= r.state
+            %td= r.beds
+            %td= r.baths
+            %td= r.sq_ft
+            %td= r.type_of_estate
+            %td= r.sale_date
+            %td= r.price
+            %td= r.latitude
+            %td= r.longitude
+            %td
+              = link_to 'Show', real_estate_path(r.id),
+                class: 'btn btn-small btn-info'
+
+              = link_to 'Delete', { controller: :real_estates,
+                action: 'destroy', id: r.id }, method: :delete,
+                class: 'btn btn-small btn-danger'

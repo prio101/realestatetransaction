@@ -1,0 +1,20 @@
+%div.container
+  %div.row
+    %div.jumbotron
+      %h2.text-center Real Estate Detail Page
+  %div.row
+    %div.col-md-12
+    = simple_form_for @real_estate do |r|
+      = r.input :street, input_html: { class: 'form-control' }
+      = r.input :city, input_html: { class: 'form-control' }
+      = r.input :zip, input_html: { class: 'form-control' }
+      = r.input :state, input_html: { class: 'form-control' }
+      = r.input :beds, input_html: { class: 'form-control' }
+      = r.input :sq_ft, input_html: { class: 'form-control' }
+      = r.input :type_of_estate, input_html: { class: 'form-control' }
+      = r.input :sale_date, input_html: { class: 'form-control' }
+      = r.input :price, input_html: { class: 'form-control' }
+      = r.input :latitude, input_html: { class: 'form-control' }
+      = r.input :longitude, input_html: { class: 'form-control' }
+
+      = r.button :submit, input_html: { class: 'btn btn-lg btn-info'}
