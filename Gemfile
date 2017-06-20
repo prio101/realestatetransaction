@@ -35,6 +35,8 @@ gem 'jquery-rails'
 gem 'simple_form'
 # Kaminari
 gem 'kaminari'
+# Ransack
+gem 'ransack'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
