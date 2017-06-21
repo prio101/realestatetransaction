@@ -56,6 +56,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'shoulda-matchers', '~> 3.0', require: false
+  gem 'rails-controller-testing'
   # Rubocop
   gem 'rubocop', '~> 0.49.1', require: false
 end

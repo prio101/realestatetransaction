@@ -39,7 +39,7 @@ class RealEstatesController < ApplicationController
   def destroy
     RealEstate.find(params[:id]).destroy
     flash[:success] = 'Data Deleted'
-    redirect_to real_estate_index_path
+    redirect_to real_estates_path
   end
 
   private
