@@ -4,13 +4,15 @@ RSpec.describe RealEstatesController, type: :controller do
   let(:real_estate) { FactoryGirl.create(:real_estate) }
   let(:real_estate_instance) { RealEstate }
   let(:valid_params) { FactoryGirl.attributes_for(:real_estate) }
-  let(:invalid_params) { FactoryGirl.attributes_for(:real_estate,
-                                                    price: 'Some') }
-  let(:valid_update_attr) { FactoryGirl.attributes_for(:real_estate,
-                                                       street: 'great wall') }
-  let(:invalid_update_attr) { FactoryGirl.attributes_for(:real_estate,
-                                                         street: ''
-                                                         ) }
+  let(:invalid_params) do
+    FactoryGirl.attributes_for(:real_estate, price: 'Some')
+  end
+  let(:valid_update_attr) do
+    FactoryGirl.attributes_for(:real_estate, street: 'great wall')
+  end
+  let(:invalid_update_attr) do
+    FactoryGirl.attributes_for(:real_estate, street: '')
+  end
   describe '#index' do
     it 'returns 200 status code' do
       get :index
