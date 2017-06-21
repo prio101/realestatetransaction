@@ -9,7 +9,8 @@ RSpec.describe RealEstatesController, type: :controller do
   let(:valid_update_attr) { FactoryGirl.attributes_for(:real_estate,
                                                        street: 'great wall') }
   let(:invalid_update_attr) { FactoryGirl.attributes_for(:real_estate,
-                                                         street: '') }
+                                                         street: ''
+                                                         ) }
   describe '#index' do
     it 'returns 200 status code' do
       get :index
@@ -70,8 +71,8 @@ RSpec.describe RealEstatesController, type: :controller do
       end
 
       it 'creates new record' do
-        expect { post :create, params: { real_estate: valid_params }}
-            .to change(RealEstate, :count).by(1)
+        expect { post :create, params: { real_estate: valid_params } }
+          .to change(RealEstate, :count).by(1)
       end
 
       it 'returns the success flash message' do
@@ -81,7 +82,8 @@ RSpec.describe RealEstatesController, type: :controller do
 
       it 'redirect to the real estate page' do
         post :create, params: { real_estate: valid_params }
-        expect(response).to redirect_to "/real_estates/#{assigns(:real_estate).id}"
+        expect(response)
+          .to redirect_to "/real_estates/#{assigns(:real_estate).id}"
       end
     end
 
@@ -95,7 +97,7 @@ RSpec.describe RealEstatesController, type: :controller do
         post :create, params: { real_estate: invalid_params }
         expect(response).to render_template 'new'
       end
-   end
+    end
   end
 
   describe '#edit' do
@@ -118,7 +120,7 @@ RSpec.describe RealEstatesController, type: :controller do
   describe '#update' do
     context 'with valid params' do
       it 'returns the status code 302' do
-        patch :update, params: { id:real_estate.id,
+        patch :update, params: { id: real_estate.id,
                                  real_estate: valid_update_attr }
         expect(response.status).to eq 302
       end
@@ -126,7 +128,8 @@ RSpec.describe RealEstatesController, type: :controller do
       it 'renders the real_estate template' do
         patch :update, params: { id: real_estate.id,
                                  real_estate: valid_update_attr }
-        expect(response).to redirect_to "/real_estates/#{assigns(:real_estate).id}"
+        expect(response)
+          .to redirect_to "/real_estates/#{assigns(:real_estate).id}"
       end
 
       it 'returns the success flash message' do
@@ -145,13 +148,13 @@ RSpec.describe RealEstatesController, type: :controller do
 
     context 'with invalid params' do
       it 'returns the status code 302' do
-        patch :update, params: { id:real_estate.id,
+        patch :update, params: { id: real_estate.id,
                                  real_estate: invalid_update_attr }
         expect(response.status).to eq 200
       end
 
       it 'renders edit template' do
-        patch :update, params: { id:real_estate.id,
+        patch :update, params: { id: real_estate.id,
                                  real_estate: invalid_update_attr }
         expect(response).to render_template 'edit'
       end
